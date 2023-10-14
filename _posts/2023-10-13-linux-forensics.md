@@ -2,7 +2,7 @@
 layout: post
 title: Linux Forensics
 date: '2023-10-13 16:11:36 +0300'
-image: /assets/img/cover_images/31.jpg
+image: /assets/img/cover_images/31.png
 categories: [Forensics, Linux]
 tags: [Linux]
 ---

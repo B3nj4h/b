@@ -27,6 +27,7 @@ Hello there this is Benjamin nice to meet you.
 
 [Blue Team Labs Online](https://blueteamlabs.online/public/user/29064d927653e1cdaad8c6)
 
+![img-description](/assets/img/cert/dfe.png)
 
 [![b3njah](https://www.hackthebox.eu/badge/image/421930)](https://app.hackthebox.com/profile/421930)
   
