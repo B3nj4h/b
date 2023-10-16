@@ -8,9 +8,34 @@ tags: [Android]
 ---
 
 ## Getting started with android hacking
+Android is a Linux-based open source platform developed by the Open handset Alliance (a consortium lead by Google), which serves as a mobile operating system (OS). At its core, the operating system is known as Android Open Source Project (AOSP). The following are the major components of android.
 
-Android is a mobile based operating system based on a modified version of the linux kernel. Android was developed by the Open handset Alliance and later acquired by Google. At its core, the operating system is known as Android Open Source Project (AOSP)
+![img-description](/assets/img/intro-to-android-hacking/android.png)
 
+### The Linux Kernel
+Android runtime relies on the the Linux kernel for underlying functionalities such as threading and low-level memory management.
+### Hardware abstraction layer (HAL)
+Think of HAL as a bridge between Android operating system and the hardware components. They provide standard interfaces that expose device hardware capabilities such as the sensors, camera, bluetooth, audio and other more to the higher-level Java API framework. Devices running Android 8.0 and above must support HALs written in the HAL Interface Definition Language (HIDL). HIDL is a language similar to C.
+Android 11 also introduces support for HALs written in the Android Interface Definition Language (AIDL).
+### Android runtime
+Android runtime (ART) is the managed runtime used by applications and some system services on Android. For devices running Android version 5.0 (API level 21) or higher, each app runs in its own process and with its own instance of the Android Runtime (ART). ART runs multiple virtual machine for each application on low memory devices by executing Dalvik Executable format (DEX) files. The main features of ART are 
+* Ahead-of-time (AOT) compilation
+* Improved garbage collection
+* Development and debugging improvements
+* Improved diagnostic detail in exceptions and crash repor
+
+### Native C/C++ libraries
+The ART and HAL, are built from native code that requires native libraries written in C and C++. The Android platform provides Java framework APIs to expose the functionality of some of these native libraries to apps. For example, you can access OpenGL ES through the Android framework’s Java OpenGL API to add support for drawing and manipulating 2D and 3D graphics in your app. The Android NDK can be used to access some of these native platform libraries directly from your native code. 
+### Java API framework
+The entire feature-set of the Android OS is available to you through APIs written in the Java language. These APIs form the building blocks you need to create Android apps by simplifying the reuse of core, modular system components and services, which include the following:
+* A rich and extensible view system you can use to build an app’s UI, including lists, grids, text boxes, buttons, and even an embeddable web browser
+* A resource manager, providing access to non-code resources such as localized strings, graphics, and layout files
+* A notification manager that enables all apps to display custom alerts in the status bar
+* An activity manager that manages the lifecycle of apps and provides a common navigation back stack
+* Content providers that enable apps to access data from other apps, such as the Contacts app, or to share their own data
+
+### System apps
+Android comes with a set of system apps for email, SMS messaging, calendars, internet browsing, contacts, and more. The developers can invoke these apps instead of recreating their own functionalities themeselves.
 ## Android package
 an apk file is a archive file that contains the files needed by the application to run. it can be unpacked by the following command
 
