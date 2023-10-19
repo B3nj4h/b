@@ -5,11 +5,11 @@ icon: fas fa-info-circle
 order: 4
 ---
 
-[![Typing SVG](https://readme-typing-svg.demolab.com/?lines=HI+There+I'M+Benjamin;SOC+Analyst,;Android+Developer,;CTF+Player,;Security+Researcher,;Love+to+learn+new+stuffs&color=cyan&size=25&center=true&vCenter=true&width=600&height=100&)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com/?lines=HI+There+I'M+Benjamin;Android+Hacking,;Digital Forensics,;CTF+Player,;Security+Researcher,;Love+to+learn+new+stuffs&color=cyan&size=25&center=true&vCenter=true&width=600&height=100&)](https://git.io/typing-svg)
 
 ## WHOAMI
 
-Hello there this is Benjamin nice to meet you.
+Hello there this is Benjamin A CTF player, Digital Forensics Analyst, Android Hacker, Security researcher.
 
 ## SKILLS
 

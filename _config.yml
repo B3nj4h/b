@@ -20,10 +20,10 @@ timezone: Africa/Nairobi
 
 title: B3NJ4H # the main title
 
-tagline: CTF Player | SOC Analyst | Android hacking | Bug bounty hunter # it will display as the sub-title
+tagline: CTF Player | Android hacking | Digital Forensics | Bug bounty hunter # it will display as the sub-title
 
 description: >- # used by seo meta and the atom feed
-  CTF Player | SOC Analyst | Android hacking | Bug bounty hunter 
+  CTF Player | Android hacking | Digital Forensics | Bug bounty hunter 
 
 # fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
 url: "https://b3nj4h.github.io"
