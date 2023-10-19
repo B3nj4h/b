@@ -33,9 +33,42 @@ The entire feature-set of the Android OS is available to you through APIs writte
 * A notification manager that enables all apps to display custom alerts in the status bar
 * An activity manager that manages the lifecycle of apps and provides a common navigation back stack
 * Content providers that enable apps to access data from other apps, such as the Contacts app, or to share their own data
-
 ### System apps
 Android comes with a set of system apps for email, SMS messaging, calendars, internet browsing, contacts, and more. The developers can invoke these apps instead of recreating their own functionalities themeselves.
+
+## Android Application Components
+The application components are the essential blocks of and Android app. Each has a distinct life cycle.
+
+### Activity
+It represents a single screen with a UI. For example a chat app might have an activity that shows a list of chats, another activity to compose a chat and other activities for specific tasks.
+
+### Service
+A service allows an app to run in background without a user interface to perform long running operations or to perform work for remote processes. THere are to types of services
+* Started services tell the system to keep them running until their work is completed. This might be to sync some data in the background or play music even after the user leaves the app. 
+* Bound services run because some other app (or the system) has said that it wants to make use of the service. A bound service provides an API to another process, and the system knows there is a dependency between these processes. So if process A is bound to a service in process B, the system knows that it needs to keep process B and its service running for A.
+
+### Broadcast Receiver
+A broadcast receiver is a component that lets the system deliver events to the app outside of a regular user flow so the app can respond to system-wide broadcast announcements. Because broadcast receivers are another well-defined entry into the app, the system can deliver broadcasts even to apps that aren't currently running.
+So, for example, an app can schedule an alarm to post a notification to tell the user about an upcoming event. Because the alarm is delivered to a BroadcastReceiver in the app, there is no need for the app to remain running until the alarm goes off.
+Many broadcasts originate from the system, like a broadcast announcing that the screen is turned off, the battery is low, or a picture is captured. Apps can also initiate broadcasts, such as to let other apps know that some data is downloaded to the device and is available for them to use. 
+
+### Content Provider
+A content provider manages a shared set of app data that you can store in the file system, in a SQLite database, on the web, or on any other persistent storage location that your app can access. Through the content provider, other apps can query or modify the data, if the content provider permits it.
+For example, the Android system provides a content provider that manages the user's contact information. Any app with the proper permissions can query the content provider, such as using ```ContactsContract.Data```, to read and write information about a particular person. 
+
+## Additional components
+### Fragments
+Represents a portion of user interface in an Activity.
+
+### Intent
+Intent activates three of the four component types: activities, services, and broadcast receivers. Intents bind individual components to each other at runtime. You can think of them as the messengers that request an action from other components, whether the component belongs to your app or another.
+
+### The manifest file
+Before the Android system can start an app component, the system must know that the component exists by reading the app's manifest file, AndroidManifest.xml. Your app declares all its components in this file, which is at the root of the app project directory.
+
+### App resources
+These include files such as images, audio files, and anything relating to the visual presentation of the app. For example, you can define animations, menus, styles, colors, and the layout of activity user interfaces with XML files. 
+
 ## Android package
 an apk file is a archive file that contains the files needed by the application to run. it can be unpacked by the following command
 
