@@ -56,4 +56,9 @@ We were able to bypass the Root detection.
 ![img-description](/assets/img/apktool/3.png)
 
 We can bypass any functions or manipulate them as long as we can reverse the apk and understand the functions and how they operate. 
-## FЯIDA my one true lover 
+
+## FRida scripsts
+[https://codeshare.frida.re/@masbog/frida-android-unpinning-ssl/] (Bypassing SSL Pinning)
+[https://codeshare.frida.re/@pcipolloni/universal-android-ssl-pinning-bypass-with-frida/] (Bypassing SSL Pinning)
+[https://gist.github.com/d3vilbug/41deacfe52a476d68d6f21587c5f531d] (Getting AES Keys)
+[https://gist.github.com/pich4ya/0b2a8592d3c8d5df9c34b8d185d2ea35] (Bypassing root detection and RootBeer library)                                
