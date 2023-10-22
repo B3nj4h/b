@@ -29,6 +29,8 @@ Hello there this is Benjamin A CTF player, Digital Forensics Analyst, Android Ha
 
 ![img-description](/assets/img/cert/dfe.png)
 
+![img-description](/assets/img/cert/droneforensics.png)
+
 [![b3njah](https://www.hackthebox.eu/badge/image/421930)](https://app.hackthebox.com/profile/421930)
   
 <a href="https://stats.hyochan.dev/en/stats/B3nj4h"><img src="https://stats.hyochan.dev/api/github-stats?login=B3nj4h" width="600" /></a>
