@@ -2,7 +2,7 @@
 layout: post
 title: Android Intents and Intent Filters
 date: '2023-10-23 05:39:12 +0300'
-image: /assets/img/cover_images/34.png
+image: /assets/img/cover_images/33.png
 categories: [Android hacking, Android Intents and Intent Filters]
 tags: [Intents, Intent Filters, ]
 ---
@@ -51,6 +51,15 @@ You can start a new instance of an Activity by passing an Intent to startActivit
 Intent(applicationContext, MyActivity::class.java).also { intent ->
     startActivity(intent)
 }
+```
+```kotlin
+val startForResult = registerForActivityResult(StartActivityForResult()) { result ->
+    if (result.resultCode == Activity.RESULT_OK) {
+        val intent = result.data
+        // Handle the Intent
+    }
+}
+startForResult.launch(Intent(this, ResultProducingActivity::class.java))
 ```
 ### Starting a service
 You can start a service to perform a one-time operation (such as downloading a file) by passing an Intent to startService().
