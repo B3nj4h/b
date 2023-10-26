@@ -4,7 +4,7 @@ title: Squid Game
 date: '2023-10-25 02:45:17 +0300'
 image: /assets/img/cover_images/35.png
 categories: [BTLO, CTF-Like]
-tags: [Email Client, Text Editor, Pdf-Parser, Base64, Xlsx]
+tags: [BTLO, Stegsolve, Steghide]
 ---
 
 ## Squid Game
