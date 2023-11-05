@@ -30,7 +30,11 @@ The app has insecure logging
 
 ![img-description](/assets/img/bsides2023/8.png)
 
-We try to grep for BSidesNRB and we get the first piece of the flag
+We try to grep for BSidesNRB using logcat inside the AVD
+```bash
+logcat | grep -i BSidesNRB
+```
+and we get the first piece of the flag
 ```bash
 11-04 06:52:19.517  6254  6254 D BSidesNRB: Value is: BSidesNBI{4ndro1d
 ```
@@ -86,7 +90,7 @@ We use the output as our input string and hit the submit button. We get the acti
 
 ![img-description](/assets/img/bsides2023/2.png)
 
-We take the string and slap it in cyber chef and wait for it to do the magic. Boom there we got we get the flag
+We take the string and slap it in cyber chef and wait for it to do the magic. Boom there we go we get the flag
 
 ![img-description](/assets/img/bsides2023/4.png)
 

