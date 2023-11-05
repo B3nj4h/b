@@ -75,6 +75,116 @@ We now have the full flag
 ```
 BSidesNBI{4ndro1d_db_m1sc0nf1gs_4r3_d4ng3r0usss}
 ```
+### WatchDog
+We get this if statement in the decompiled code. Let's try changing it in the smali code to bypass the check
+
+![img-description](/assets/img/bsides2023/11.png)
+
+decompile the app with apk tool
+```bash
+apktool d watchdog.apk
+```
+From the decompiled app we know the package and the class
+
+![img-description](/assets/img/bsides2023/12.png)
+
+We navigate to smali > d > b.smali and locate the if statement
+
+```bash
+    .line 15
+    .line 16
+    const/4 v1, 0x0
+
+    .line 17
+    if-eqz p1, :cond_0
+
+    .line 18
+    .line 19
+    const-string p1, "You cannot move right now, the light is red!!"
+
+    .line 20
+    .line 21
+    invoke-static {v3, p1, v1}, Landroid/widget/Toast;->makeText(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;
+
+    .line 22
+    .line 23
+    .line 24
+    move-result-object p1
+```
+
+We change the if-eqz to if-nez 
+```bash
+    .line 17
+    if-nez p1, :cond_0
+```
+We need to change extractNativeLibs to true in the manifest file to avoid any installation errors
+```bash
+android:extractNativeLibs="true"
+```
+Let's compile the apk again
+```bash
+apktool b watchdog
+I: Using Apktool 2.8.1-dirty
+I: Checking whether sources has changed...
+I: Checking whether resources has changed...
+I: Building resources...
+I: Building apk file...
+I: Copying unknown files/dir...
+I: Built apk into: watchdog/dist/watchdog.apk
+```
+Next we need to sign the apk. Let's navigate to the location of the apk file
+```bash
+cd watchdog/dist/
+```
+We then generate a key
+```bash
+keytool -genkey -keystore whoami.keystore -keyalg RSA -keysize 2048 -validity 1000
+-alias whoami
+Enter keystore password:  
+Re-enter new password: 
+What is your first and last name?
+  [Unknown]:  
+What is the name of your organizational unit?
+  [Unknown]:  
+What is the name of your organization?
+  [Unknown]:  
+What is the name of your City or Locality?
+  [Unknown]:  
+What is the name of your State or Province?
+  [Unknown]:  
+What is the two-letter country code for this unit?
+  [Unknown]:  
+Is CN=Unknown, OU=Unknown, O=Unknown, L=Unknown, ST=Unknown, C=Unknown correct?
+  [no]:  yes
+
+Generating 2,048 bit RSA key pair and self-signed certificate (SHA256withRSA) with a validity of 1,000 days
+	for: CN=Unknown, OU=Unknown, O=Unknown, L=Unknown, ST=Unknown, C=Unknown
+```
+Lastly we sign our apk
+```bash
+jarsigner -keystore whoami.keystore -verbose watchdog.apk whoami
+```
+Make sure you get this at the end
+```bash
+>>> Signer
+    X.509, CN=Unknown, OU=Unknown, O=Unknown, L=Unknown, ST=Unknown, C=Unknown
+    Signature algorithm: SHA256withRSA, 2048-bit key
+    [trusted certificate]
+
+jar signed.
+
+Warning: 
+The signer's certificate is self-signed.
+```
+We unistall the old apk and install the new one
+```bash
+adb uninstall watchdog.apk
+adb install watchdog.apk
+```
+We open the app and click the button. Finally we get the flag
+
+![img-description](/assets/img/bsides2023/13.png)
+
 
 ### Whatslif3
 Thou shall find what made him one with the world.
