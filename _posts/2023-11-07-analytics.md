@@ -3,7 +3,7 @@ layout: post
 title: Analytics
 date: '2023-11-07 07:40:44 +0300'
 image: /assets/img/cover_images/41.png
-categories: [HTB]
+categories: [HTB, Analytics]
 ---
 
 ## Machine Info
