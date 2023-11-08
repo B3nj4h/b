@@ -76,6 +76,7 @@ We now have the full flag
 BSidesNBI{4ndro1d_db_m1sc0nf1gs_4r3_d4ng3r0usss}
 ```
 ### WatchDog
+#### First method
 We get this if statement in the decompiled code. Let's try changing it in the smali code to bypass the check
 
 ![img-description](/assets/img/bsides2023/11.png)
@@ -185,6 +186,64 @@ We open the app and click the button. Finally we get the flag
 
 ![img-description](/assets/img/bsides2023/13.png)
 
+#### Second method
+We can use frida script to change the true variable to false using a custom script Thanks to madbit for the script 
+```javascript
+Java.perform(function () {
+    var MainActivity = Java.use('com.bsidesnrb.watchdog.MainActivity');
+
+    // Hook the onCreate method of MainActivity
+    MainActivity.onCreate.overload('android.os.Bundle').implementation = function (bundle) {
+        // Call the original onCreate method
+        this.onCreate(bundle);
+
+        // Attempt to modify the field directly, handle the case where the field might be obfuscated
+        try {
+            var f = MainActivity.class.getDeclaredField('f1258t');
+            f.setAccessible(true);
+            f.setBoolean(this, false);
+            console.log('Field f1258t set to false successfully.');
+        } catch (e) {
+            console.log('Field f1258t not found. Attempting to find the obfuscated field name.');
+
+            // If the field name is obfuscated, you might need to iterate over all fields and find the correct one by type
+            var fields = MainActivity.class.getDeclaredFields();
+            for (var i = 0; i < fields.length; i++) {
+                var field = fields[i];
+                if (field.getType().getName() === 'boolean') {
+                    field.setAccessible(true);
+                    field.setBoolean(this, false);
+                    console.log('Field name: ' + field.getName() + ', Type: ' + field.getType().getName());
+                    console.log('Obfuscated boolean field set to false successfully. Field name: ' + field.getName());
+                    break;
+                }
+            }
+        }
+    };
+});
+```
+We use frida to change the boolean to false
+```bash
+frida -l bypass -f com.bsidesnrb.watchdog -U
+     ____
+    / _  |   Frida 16.1.4 - A world-class dynamic instrumentation toolkit
+   | (_| |
+    > _  |   Commands:
+   /_/ |_|       help      -> Displays the help system
+   . . . .       object?   -> Display information about 'object'
+   . . . .       exit/quit -> Exit
+   . . . .
+   . . . .   More info at https://frida.re/docs/home/
+   . . . .
+   . . . .   Connected to Pixel 2 (id=127.0.0.1:6555)
+Spawned `com.bsidesnrb.watchdog`. Resuming main thread!                 
+[Pixel 2::com.bsidesnrb.watchdog ]-> Field f1258t not found. Attempting to find the obfuscated field name.
+Field name: t, Type: boolean
+Obfuscated boolean field set to false successfully. Field name: t
+```
+We click move and we get the flag
+
+![img-description](/assets/img/bsides2023/13.png)
 
 ### Whatslif3
 Thou shall find what made him one with the world.
