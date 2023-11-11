@@ -22,20 +22,31 @@ Hello there this is Benjamin A CTF player @p3rf3ctr00t, Offensive security, Andr
 [Rupper](https://github.com/B3nj4h/rupper) : Your password's worst nightmare in Rust! Unleash the relentless power of code-cracking with a dash of Rustic humor. Get ready to make those forgotten passwords regret their life choices!💥🔐 
 
 [Kinetic]((https://github.com/B3nj4h/Inverse)): Igniting Gaming Passion with Jetpack Compose App, Harnessing the Rawg API, and Embracing MVVM Clean Architecture for a Thrilling Gaming Exploration!
+## STATS
 
-## ACHIEVEMENTS
+<table>
+  <tr>
+    <td>
+        <script src="https://www.hackthebox.eu/badge/421930"></script>
+    </td>
+    <td>
+         <script src="https://tryhackme.com/badge/1611611"></script>
+    </td>
+  </tr>
+</table>
+
+<a href="https://stats.hyochan.dev/en/stats/B3nj4h"><img src="https://stats.hyochan.dev/api/github-stats?login=B3nj4h" width="600" /></a>
+
+## ACHIEVEMENTS AND CERTIFICATIONS
 
 [Blue Team Labs Online](https://blueteamlabs.online/public/user/29064d927653e1cdaad8c6)
 
-Won the BSIDES 2023 CTF With p3rf3ctr00t
+<!-- Won the BSIDES 2023 CTF With p3rf3ctr00t
 
 
-Won the Huawei, Communications Authority of kenya and Kenya CyberSecurity and Forensics Authority 2023 october hackathon
+Won the Huawei, Communications Authority of kenya and Kenya CyberSecurity and Forensics Authority 2023 october hackathon -->
 
-![img-description](/assets/img/cert/dfe.png)
+[Digital Forensics Essentials (DFE)](/assets/img/cert/dfe.png)
 
-![img-description](/assets/img/cert/droneforensics.png)
+[Hands-on Drone Forensics](/assets/img/cert/droneforensics.png)
 
-[![b3njah](https://www.hackthebox.eu/badge/image/421930)](https://app.hackthebox.com/profile/421930)
-  
-<a href="https://stats.hyochan.dev/en/stats/B3nj4h"><img src="https://stats.hyochan.dev/api/github-stats?login=B3nj4h" width="600" /></a>
