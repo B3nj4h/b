@@ -3,7 +3,7 @@ layout: post
 title: Intercepting network traffic
 date: '2023-10-05 14:35:29 +0800'
 image: /assets/img/cover_images/20.png
-categories: [Android hacking, Intro to android hacking, Intercepting network traffic]
+categories: [Android hacking 101, Intro to android hacking, Intercepting network traffic]
 tags: [Android, Reverse Engineering, Burpsuite, http]
 ---
 

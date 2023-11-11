@@ -3,7 +3,7 @@ layout: post
 title: Getting started with android hacking
 date: '2023-10-04 20:52:04 +0800'
 image: /assets/img/cover_images/1.png
-categories: [Android hacking, Intro to android hacking]
+categories: [Android hacking 101, Intro to android hacking]
 tags: [Android]
 ---
 

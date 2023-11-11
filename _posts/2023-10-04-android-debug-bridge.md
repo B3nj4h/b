@@ -3,7 +3,7 @@ layout: post
 title: Android Debug Bridge
 date: '2023-10-04 22:53:39 +0800'
 image: /assets/img/cover_images/24.png
-categories: [Android hacking,Intro to android hacking, The Android Debug Bridge(ADB)]
+categories: [Android hacking 101,Intro to android hacking, The Android Debug Bridge(ADB)]
 tags: [Android, ADB]
 ---
 

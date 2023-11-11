@@ -3,7 +3,7 @@ layout: post
 title: Android important directories
 date: '2023-10-04 23:59:50 +0800'
 image: /assets/img/cover_images/23.png
-categories: [Android hacking, Intro to android hacking, Android Important Directories]
+categories: [Android hacking 101, Intro to android hacking, Android Important Directories]
 tags: [Android, Directories]
 ---
 

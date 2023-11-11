@@ -9,7 +9,7 @@ order: 4
 
 ## WHOAMI
 
-Hello there this is Benjamin A CTF player @p3rf3ctr00t_ke, Offensive security, Android Hacking
+Hello there this is Benjamin A CTF player @p3rf3ctr00t, Offensive security, Android Hacking
 
 ## SKILLS
 
@@ -26,6 +26,11 @@ Hello there this is Benjamin A CTF player @p3rf3ctr00t_ke, Offensive security, A
 ## ACHIEVEMENTS
 
 [Blue Team Labs Online](https://blueteamlabs.online/public/user/29064d927653e1cdaad8c6)
+
+Won the BSIDES 2023 CTF With p3rf3ctr00t
+
+
+Won the Huawei, Communications Authority of kenya and Kenya CyberSecurity and Forensics Authority 2023 october hackathon
 
 ![img-description](/assets/img/cert/dfe.png)
 

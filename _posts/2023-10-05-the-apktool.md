@@ -3,7 +3,7 @@ layout: post
 title: The apktool
 date: '2023-10-05 01:54:43 +0800'
 image: https://apktool.org/img/social-card.png
-categories: [Android hacking, Intro to android hacking, The apktool]
+categories: [Android hacking 101, Intro to android hacking, The apktool]
 tags: [Android, Reverse Engineering, Apktool]
 ---
 

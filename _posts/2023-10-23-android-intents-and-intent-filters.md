@@ -3,7 +3,7 @@ layout: post
 title: Android Intents and Intent Filters
 date: '2023-10-23 05:39:12 +0300'
 image: /assets/img/cover_images/33.png
-categories: [Android hacking, Android Intents and Intent Filters]
+categories: [Android hacking 101, Android Intents and Intent Filters]
 tags: [Intents, Intent Filters, ]
 ---
 

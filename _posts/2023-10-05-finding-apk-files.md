@@ -3,7 +3,7 @@ layout: post
 title: Finding apk files
 date: '2023-10-05 00:50:00 +0800'
 image: /assets/img/cover_images/22.png
-categories: [Android hacking, Intro to android hacking, Finding apk files]
+categories: [Android hacking 101, Intro to android hacking, Finding apk files]
 tags: [Android, Apk]
 ---
 

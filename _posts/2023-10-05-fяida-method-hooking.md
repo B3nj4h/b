@@ -3,7 +3,7 @@ layout: post
 title: FЯIDA - Method hooking
 date: '2023-10-05 18:01:21 +0800'
 image: /assets/img/cover_images/18.png
-categories: [Android hacking, Intro to android hacking, FЯIDA - Method hooking]
+categories: [Android hacking 101, Intro to android hacking, FЯIDA - Method hooking]
 tags: [Android, Reverse Engineering, FЯIDA, Javascript, Hooking]
 ---
 

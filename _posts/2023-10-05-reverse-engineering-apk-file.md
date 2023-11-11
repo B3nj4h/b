@@ -3,7 +3,7 @@ layout: post
 title: Reverse engineering apk file
 date: '2023-10-05 01:08:46 +0800'
 image: /assets/img/cover_images/21.png
-categories: [Android hacking, Intro to android hacking, Reverse engineering android apk file]
+categories: [Android hacking 101, Intro to android hacking, Reverse engineering android apk file]
 tags: [Android, Reverse Engineering, Jadx, Apktool]
 ---
 
