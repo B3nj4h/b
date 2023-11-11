@@ -8,8 +8,8 @@ categories: [HTB, Analytics]
 
 ## Machine Info
 
-> **[Analytics](https://app.hackthebox.com/machines/Analytics)** is an easy linux machine which leverages ```Metabse RCE``` and ```Ubuntu OverLaysFs Local privesc```
-{: .prompt-tip }
+> **[Analytics](https://app.hackthebox.com/machines/Analytics)** is an easy linux machine which leverages `Metabse RCE` and `Ubuntu OverLaysFs Local privesc`
+{: .prompt-info }
 
 ## ENUMERATION
 We perform a simple scan for top 100 ports
