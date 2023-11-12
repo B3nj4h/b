@@ -9,7 +9,7 @@ order: 4
 
 ## WHOAMI
 
-Hello there this is Benjamin A CTF player @p3rf3ctr00t, Offensive security, Android Hacking
+Hello there this is Benjamin A CTF player @p3rf3ctr00t, Offensive security, Android Hacking and a bug bounty hunter
 
 ## SKILLS
 

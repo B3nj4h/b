@@ -259,9 +259,7 @@ We use the output as our input string and hit the submit button. We get the acti
 
 ![img-description](/assets/img/bsides2023/2.png)
 
-We take the string and slap it in cyber chef and wait for it to do the magic. Boom there we go we get the flag
-
-![img-description](/assets/img/bsides2023/4.png)
+We take the string and slap it in cyber chef and wait for it to do the magic. Boom there we go we get the flag `BSidesNRB{c4r3full_hubr1s_w1ll_t4k3_us_0u7}`
 
 
 ## Forensics
