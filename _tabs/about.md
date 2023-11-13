@@ -39,7 +39,10 @@ Hello there this is Benjamin A CTF player @p3rf3ctr00t, Offensive security, Andr
 
 ## ACHIEVEMENTS AND CERTIFICATIONS
 
-[Blue Team Labs Online](https://blueteamlabs.online/public/user/29064d927653e1cdaad8c6)
+[Blue Team Labs Online Profile](https://blueteamlabs.online/public/user/29064d927653e1cdaad8c6)
+
+[Hack The Box Profile](https://app.hackthebox.com/profile/421930)
+
 
 <!-- Won the BSIDES 2023 CTF With p3rf3ctr00t
 
