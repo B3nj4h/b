@@ -5,11 +5,11 @@ icon: fas fa-info-circle
 order: 4
 ---
 
-[![Typing SVG](https://readme-typing-svg.demolab.com/?lines=HI+There+I'M+Benjamin;Android+Hacking,;Offensive+Security,;CTF+Player,;Security+Researcher,;Love+to+learn+new+stuffs&color=cyan&size=25&center=true&vCenter=true&width=600&height=100&)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com/?lines=HI+There+I'M+Benjamin;Android+Hacking,;SOC+Analyst,;CTF+Player,;Security+Researcher,;Love+to+learn+new+stuffs&color=cyan&size=25&center=true&vCenter=true&width=600&height=100&)](https://git.io/typing-svg)
 
 ## WHOAMI
 
-Hello there this is Benjamin A CTF player @p3rf3ctr00t, Offensive security, Android Hacking and a bug bounty hunter
+Hello there this is Benjamin A CTF player @p3rf3ctr00t, SOC Analyst, Android Hacking and a bug bounty hunter
 
 ## SKILLS
 
@@ -53,3 +53,4 @@ Won the Huawei, Communications Authority of kenya and Kenya CyberSecurity and Fo
 
 [Hands-on Drone Forensics](/assets/img/cert/droneforensics.png)
 
+[Cyber talents blue team by Trend Micro certificate](/assets/img/cert/blueteam.png)
