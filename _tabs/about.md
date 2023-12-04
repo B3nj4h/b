@@ -5,11 +5,11 @@ icon: fas fa-info-circle
 order: 4
 ---
 
-[![Typing SVG](https://readme-typing-svg.demolab.com/?lines=HI+There+I'M+Benjamin;Android+Hacking,;SOC+Analyst,;CTF+Player,;Security+Researcher,;Love+to+learn+new+stuffs&color=cyan&size=25&center=true&vCenter=true&width=600&height=100&)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com/?lines=HI+There+I'M+pl4inT3xt;Bug+Bounty+Hunter,;Offensive+Security,;CTF+Player,;Security+Researcher,;Love+to+learn+new+stuffs&color=cyan&size=25&center=true&vCenter=true&width=600&height=100&)](https://git.io/typing-svg)
 
 ## WHOAMI
 
-Hello there this is Benjamin A CTF player @p3rf3ctr00t, SOC Analyst, Android Hacking and a bug bounty hunter
+Hello there this is pl4inT3xt A CTF player @p3rf3ctr00t, Offensive security and a bug bounty hunter
 
 ## SKILLS
 
@@ -22,6 +22,7 @@ Hello there this is Benjamin A CTF player @p3rf3ctr00t, SOC Analyst, Android Hac
 [Rupper](https://github.com/B3nj4h/rupper) : Your password's worst nightmare in Rust! Unleash the relentless power of code-cracking with a dash of Rustic humor. Get ready to make those forgotten passwords regret their life choices!💥🔐 
 
 [Kinetic]((https://github.com/B3nj4h/Inverse)): Igniting Gaming Passion with Jetpack Compose App, Harnessing the Rawg API, and Embracing MVVM Clean Architecture for a Thrilling Gaming Exploration!
+
 ## STATS
 
 <table>
@@ -44,7 +45,7 @@ Hello there this is Benjamin A CTF player @p3rf3ctr00t, SOC Analyst, Android Hac
 [Hack The Box Profile](https://app.hackthebox.com/profile/421930)
 
 
-<!-- Won the BSIDES 2023 CTF With p3rf3ctr00t
+<!-- Won the BSIDES 2023 CTF @p3rf3ctr00t
 
 
 Won the Huawei, Communications Authority of kenya and Kenya CyberSecurity and Forensics Authority 2023 october hackathon -->
