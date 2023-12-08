@@ -20,10 +20,10 @@ timezone: Africa/Nairobi
 
 title: pl4inT3xt # the main title
 
-tagline: Offensive Security | Bug bounty hunter | CTF Player @p3rf3ctr00t # it will display as the sub-title
+tagline: Offensive Security | Android hacking | Bug bounty hunter | CTF Player @p3rf3ctr00t # it will display as the sub-title
 
 description: >- # used by seo meta and the atom feed
-  Offensive Security | Bug bounty hunter | CTF Player 
+  Offensive Security | Android hacking | Bug bounty hunter | CTF Player 
 
 # fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
 url: "https://b3nj4h.github.io"
