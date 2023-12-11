@@ -102,4 +102,6 @@ We can see `MZ` meaning it is a windows executable file.So i decided to just con
 
 ![img-description](/assets/img/brains-and-bytes/4.png)
 
-These zombies really used their brains to byte the system.
+These zombies really used their BRAINS to BYTE the system.
+
+![yay](/assets/img/brains-and-bytes/joke.gif)
