@@ -1,1 +1,1 @@
-## Personal blog
+## Blog
