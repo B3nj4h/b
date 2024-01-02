@@ -21,8 +21,7 @@ Hello there this is pl4inT3xt A CTF player @p3rf3ctr00t, Android hacking ,Offens
 
 [Rupper](https://github.com/B3nj4h/rupper) : Your password's worst nightmare in Rust! Unleash the relentless power of code-cracking with a dash of Rustic humor. Get ready to make those forgotten passwords regret their life choices!💥🔐 
 
-[Kinetic]((https://github.com/B3nj4h/Inverse)): Igniting Gaming Passion with Jetpack Compose App, Harnessing the Rawg API, and Embracing MVVM Clean Architecture for a Thrilling Gaming Exploration!
-
+[CVE-2021-4045](https://github.com/B3nj4h/CVE-2021-4045.git):  🔐 "PWNTAPO: Unveiling Command Injection in TP-Link Tapo C200 Cameras (<= v1.1.16 Build 211209)" 🔓 
 ## STATS
 
 <table>
